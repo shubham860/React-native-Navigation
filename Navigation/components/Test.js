@@ -13,6 +13,7 @@ class Test extends Component {
     static navigationOptions = ({navigation,navigationOptions}) => {
         return {
             title: navigation.getParam('name', 'A Nested Details Screen'),
+            headerBackTitle : null,
             headerStyle: {
                 backgroundColor: navigationOptions.headerTintColor,
             },

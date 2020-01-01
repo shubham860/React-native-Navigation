@@ -2,9 +2,24 @@ import React, {Component} from 'react';
 import {View,Text,Button} from 'react-native';
 
 class Home extends Component {
-    static navigationOptions = {
+    static navigationOptions = ({navigation}) => ({
         title: 'Home',
-    }
+        headerRight: () => (
+            <Button
+                onPress={() => alert('This is a button!')}
+                title="Info"
+                color="red"
+            />
+        ),
+        headerLeft: () => (
+            <Button
+                onPress={() => navigation.navigate('MyModal')}
+                title="Modal"
+                color="red"
+            />
+        ),
+
+    });
 
 
     render() {
