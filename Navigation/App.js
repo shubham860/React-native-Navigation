@@ -5,7 +5,7 @@ import { createAppContainer } from 'react-navigation';
 import { createStackNavigator } from 'react-navigation-stack';
 import 'react-native-gesture-handler';
 
-export const routes = createStackNavigator(
+ const routes = createStackNavigator(
         {
             home : Home,
             test : Test,
@@ -21,7 +21,7 @@ class App extends Component {
     render() {
         return (
             <AppContainer/>
-     )
+     );
     }
 }
 
