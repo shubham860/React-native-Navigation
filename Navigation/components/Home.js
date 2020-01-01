@@ -4,14 +4,8 @@ import {View,Text,Button} from 'react-native';
 class Home extends Component {
     static navigationOptions = {
         title: 'Home',
-        headerStyle: {
-            backgroundColor: '#f4511e',
-        },
-        headerTintColor: '#fff',
-        headerTitleStyle: {
-            fontWeight: 'bold',
-        },
-    };
+    }
+
 
     render() {
         return (

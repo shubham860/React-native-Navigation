@@ -6,9 +6,22 @@ class Test extends Component {
     //     title: 'Title of test',
     // };
 
-    static navigationOptions = ({navigation}) => ({
-       title : navigation.getParam('name','Error')
-    });
+    // static navigationOptions = ({navigation}) => ({
+    //    title : navigation.getParam('name','Error')
+    // });
+
+    static navigationOptions = ({navigation,navigationOptions}) => {
+        return {
+            title: navigation.getParam('name', 'A Nested Details Screen'),
+            headerStyle: {
+                backgroundColor: navigationOptions.headerTintColor,
+            },
+            headerTintColor: navigationOptions.headerStyle.backgroundColor,
+        };
+        };
+
+
+
 
     render() {
         const otherParam = this.props.navigation.getParam('name','Error');

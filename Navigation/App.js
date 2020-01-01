@@ -7,6 +7,13 @@ import { createBottomTabNavigator} from "react-navigation-tabs";
 import {View} from 'react-native'
 import 'react-native-gesture-handler';
 
+const bottom = createBottomTabNavigator(
+    {
+        home : Home,
+        test : Test
+    }
+)
+
 const routes = createStackNavigator(
     {
         home : Home,
@@ -26,24 +33,17 @@ const routes = createStackNavigator(
     },
 );
 
-const bottom = createBottomTabNavigator(
-    {
-        home : Home,
-        test : Test
-    }
-)
+
 
 const AppContainer = createAppContainer(routes);
-const AappContainer = createAppContainer(bottom);
+// const AappContainer = createAppContainer(bottom);
+
 
 class App extends Component {
     render() {
         return (
-
                 <AppContainer/>
-
-
-     )
+   );
     }
 }
 
